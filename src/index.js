@@ -3,11 +3,16 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { BrowserRouter } from 'react-router-dom';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    {/* wrap app components inside BrowserRouter */}
+    <BrowserRouter >  {/* this allow us to use all feature from react router within app component */}
+      <App />
+    </BrowserRouter>
+    
   </React.StrictMode>
 );
 

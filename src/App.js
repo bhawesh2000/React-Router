@@ -1,23 +1,22 @@
+//for routes configure import 2 components Routes and Route
+
 import logo from './logo.svg';
 import './App.css';
+import { Routes , Route } from 'react-router-dom';
+import Home from './Components/Home';
+import About from './Components/About';
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      
+      {/* in jsx add Routes component within which we define indevidual route using Routecomponent */}
+      {/* Route component has 2 props path and element to be rendered */}
+      <Routes>
+        <Route path='/' element = {<Home />} />
+        <Route path='about' element = {<About />} />
+      </Routes>
     </div>
   );
 }

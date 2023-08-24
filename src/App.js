@@ -6,6 +6,7 @@ import { Routes , Route } from 'react-router-dom';
 import Home from './Components/Home';
 import About from './Components/About';
 import Navbar from './Components/Navbar';
+import OrderSummary from './Components/OrderSummary';
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
       <Routes>
         <Route path='/' element = {<Home />} />
         <Route path='about' element = {<About />} />
+        <Route path='Order-Summary' element = {<OrderSummary />} />
       </Routes>
     </>
       

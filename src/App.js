@@ -5,19 +5,23 @@ import './App.css';
 import { Routes , Route } from 'react-router-dom';
 import Home from './Components/Home';
 import About from './Components/About';
+import Navbar from './Components/Navbar';
 
 
 function App() {
   return (
-    <div className="App">
-      
+    <>
+    <Navbar />
       {/* in jsx add Routes component within which we define indevidual route using Routecomponent */}
       {/* Route component has 2 props path and element to be rendered */}
       <Routes>
         <Route path='/' element = {<Home />} />
         <Route path='about' element = {<About />} />
       </Routes>
-    </div>
+    </>
+      
+      
+    
   );
 }
 

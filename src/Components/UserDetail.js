@@ -1,3 +1,4 @@
+//implementing Dynamic Route
 // useParams hook extract param from url
 import React from 'react'
 import { useParams } from "react-router-dom";

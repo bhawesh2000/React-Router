@@ -10,7 +10,10 @@ import OrderSummary from './Components/OrderSummary';
 import Products from './Components/Products';
 import FeaturedProduct from './Components/FeaturedProducts';
 import NewProducts from './Components/NewProducts'
+import Users from './Components/Users'
+import UserDetail from './Components/UserDetail'
 import NoMatch from './Components/NoMatch';
+
 
 
 function App() {
@@ -27,6 +30,9 @@ function App() {
           <Route index element={<FeaturedProduct />} /> {/* When we want a router to be rendered at parent url for that we use index as prop*/}
           <Route path='featured' element={<FeaturedProduct />} /> {/* child route */}
           <Route path='new' element={<NewProducts />} />
+        </Route>
+        <Route path='users' element={<Users />}>
+          <Route path=':userID' element={<UserDetail />} /> {/* userId is url params  */}
         </Route>
         <Route path='*' element = {<NoMatch />} /> {/* path="*" means this route will match when no other route matched..used when url is wrong so that component return msg no page found */}
       </Routes>
